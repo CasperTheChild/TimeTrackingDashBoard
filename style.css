@@ -94,7 +94,7 @@ body {
     width: 64rem;
 
     border: 3rem solid white;
-    border-radius: 50%;         /*  Is it correct?  */
+    border-radius: 50%;
 }
 
 .some_words {
@@ -204,7 +204,7 @@ body {
         gap: 21.5rem;
     }
 
-    .PersonCard {       /*      Could not do with ".person {height: N%; }"      */
+    .PersonCard {       /*      Is it OK? Can use it like this?      */
         display: grid;
         grid-template-rows: 1fr auto;
     }
@@ -230,9 +230,9 @@ body {
     }
 
     .GridContainer {
-        margin-top: 253rem;     /*      I didn't know how to center it vertically...   */
+        margin-top: 253rem;    
 
-        grid-template-areas:        /*      Which one do I need to use? Areas or by Template? Or Do I hate to use the most easiest way in each cases?       */
+        grid-template-areas:
         "person work play study"
         "person exercise social self-care";
     }
