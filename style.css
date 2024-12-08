@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root, :before, :after, * {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: var(--Font-Weight-Little);
+}
+
+:root {
+
+    /*  Primary colors  */
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-red: hsl(15, 100%, 70%);        /*  Work    */
+    --Soft-blue: hsl(195, 74%, 62%);        /*  Play    */
+    --Light-red-2: hsl(348, 100%, 68%);       /*  Study   */
+    --Lime-green: hsl(145, 58%, 55%);       /*  Exercise    */
+    --Violet-social: hsl(264, 64%, 52%);        /*  Social  */
+    --Soft-orange: hsl(43, 84%, 65%);       /*  Self-care   */
+
+    /*  Neutral */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+
+    /*  font-characteristics    */
+    --Standart-Font-Size: 18px;
+
+    --Font-Weight-Little: 300;
+    --Font-Weight-Medium: 400;
+    --Font-Weight-Big: 500;
+
+    color: White;
+    font-family: Rubik;
+    font-size: 1px;     /*  Is it Ok?   */
+
+
+    /*  Box properties  */
+
+    --border-radius: 14rem;
+    --min-width: 255rem;
+    --max-width: 327rem;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--Very-dark-blue);
+    font-size: 15rem;
+}
+
+.GridContainer {
+    display: grid;
+    
+    max-width: 1110rem;
+    margin: auto auto;
+
+    gap: 24.5rem;
+}
+
+.PersonCard, .ActivityCard {
+    width: 90%;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+    /*padding*/
+    margin: 0 auto;
+
+    border-radius: var(--border-radius);
+
+    overflow: hidden;
+}
+
+.PersonCard {
+    background-color: var(--Dark-blue);
+
+    border-radius: var(--border-radius);
+}
+
+.padding_outside {
+    padding: 35.5rem;
+}
+
+.person {
+    display: flex;
+    gap: 18rem;
+
+    background-color: var(--Blue);
+
+    border-radius: var(--border-radius);
+}
+
+.person img {
+    width: 64rem;
+
+    border: 3rem solid white;
+    border-radius: 50%;         /*  Is it correct?  */
+}
+
+.some_words {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.PersonCard h1 {
+    font-size: 24rem;
+}
+
+.PersonCard .TimeIntervals {
+    display: flex;
+    justify-content: space-between;
+}
+
+.TimeIntervals {
+    padding: 24.5rem 35.5rem;
+}
+
+.TimeIntervals p {
+    color: var(--Desaturated-blue);
+    font-size: 18rem;
+
+    transition-property: color;
+}
+
+    /*      Time Cards      */
+
+.Work {
+    background-color: var(--Light-red);
+}
+
+.Play {
+    background-color: var(--Soft-blue);
+}
+
+.Study {
+    background-color: var(--Light-red-2);
+}
+
+.Exercise {
+    background-color: var(--Lime-green);
+}
+
+.Social {
+    background-color: var(--Violet-social);
+}
+
+.Self-Care {
+    background-color: var(--Soft-orange);
+}
+
+.ColorfulBackground {
+    position: relative;
+    overflow: hidden;
+    
+    min-height: 45rem;     /*      Is it Ok?       */
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);    
+}
+
+.ColorfulBackground img { /*    all     */
+    width: 78rem;
+    position: absolute;     /*      Do I need to another position type?       */
+    transform: translateX(calc(var(--max-width) - 90rem)) translateY(-15%);     /*     Is it ok?     */
+}
+
+.BlackBackground {
+    padding: 32.5rem 30.5rem;
+
+    background-color: var(--Dark-blue);
+
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.FlexTwoEnds {
+    display: flex;
+    justify-content: space-between;
+}
+
+.SetImg {
+    border-radius: 50%;
+}
+
+.activity img, .FlexTwoEnds p {
+    align-self: center;
+}
+
+.activity h2 {
+    font-weight: var(--Font-Weight-Big);
+}
+
+.current {
+    font-size: 32rem;
+}
+
+.previous {
+    font-size: 15rem;
+}
+
+@media (min-width: 1200px) {
+    .padding_outside {
+        flex-direction: column;
+        gap: 21.5rem;
+    }
+
+    .PersonCard {       /*      Could not do with ".person {height: N%; }"      */
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    
+    .person {
+        gap: 18rem;
+    }
+
+    .person h1 {
+        font-size: 40rem;
+    }
+
+    .activity {
+        margin-bottom: 24rem;
+    }
+
+    .current {
+        margin-bottom: 10rem;
+    }
+
+    .current {
+        font-size: 56rem;
+    }
+
+    .GridContainer {
+        margin-top: 253rem;     /*      I didn't know how to center it vertically...   */
+
+        grid-template-areas:        /*      Which one do I need to use? Areas or by Template? Or Do I hate to use the most easiest way in each cases?       */
+        "person work play study"
+        "person exercise social self-care";
+    }
+
+    .PersonCard {
+        grid-area: person;
+    }
+    
+    .Work {
+        grid-area: work;
+    }
+
+    .Play {
+        grid-area: play;
+    }
+
+    .Study {
+        grid-area: study;
+    }
+
+    .Exercise {
+        grid-area: exercise;
+    }
+
+    .Social {
+        grid-area: social;
+    }
+
+    .Self-Care {
+        grid-area: self-care;
+    }
+
+    .ColorfulBackground img {
+        transform: translateX(calc(var(--min-width) - 90rem)) translateY(-15%);     /*     Is it ok?     */
+    }
+}
